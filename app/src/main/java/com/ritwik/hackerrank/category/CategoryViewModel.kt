@@ -1,12 +1,14 @@
 package com.ritwik.hackerrank.category
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ritwik.hackerrank.network.Api
 import com.ritwik.hackerrank.network.Category
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 class CategoryViewModel: ViewModel(){
 
@@ -44,11 +46,9 @@ class CategoryViewModel: ViewModel(){
                 val categoryList = getCategoriesDeferred.await()
                 _categories.value = categoryList
                 _status.value = ApiStatus.DONE
-                Log.d("Category List", categoryList.toString())
             }catch (e: Exception){
                 _status.value = ApiStatus.ERROR
                 _categories.value = ArrayList()
-                Log.d("Category List: ", "Error")
             }
         }
     }

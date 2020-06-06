@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Hackerrank</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="get_started">Get Started</string>
+    <string name="welcome_message">Let\'s Start Our Journey To Become A 6 Star Coder</string>
 </resources>

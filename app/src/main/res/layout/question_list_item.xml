@@ -14,20 +14,23 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(question)}"
+        app:cardBackgroundColor="#FDFDFD"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
-        app:contentPadding="20dp"
-        android:onClick="@{() -> clickListener.onClick(question)}">
+        app:contentPadding="20dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/questionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather_light"
+            android:text="@{question.question_text}"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
-            tools:text="@tools:sample/full_names"
-            android:text="@{question.question_text}"/>
+            tools:text="@tools:sample/full_names" />
 
 
     </com.google.android.material.card.MaterialCardView>

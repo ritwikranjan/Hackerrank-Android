@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:onClick="@{() -> clickListener.onClick(category)}"
         android:padding="3dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#f0f0f0"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true"
@@ -34,25 +34,27 @@
                 android:id="@+id/category_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/habibi"
                 android:paddingStart="5dp"
                 android:paddingTop="2dp"
                 android:paddingEnd="5dp"
                 android:text="@{category.category_name}"
                 android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textStyle="normal|bold"
                 tools:text="@tools:sample/cities" />
 
             <TextView
                 android:id="@+id/get_started_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/merriweather_light"
                 android:paddingStart="5dp"
                 android:paddingTop="15dp"
                 android:paddingEnd="5dp"
                 android:paddingBottom="5dp"
                 android:text="@string/get_started"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="#1A237E"
                 android:textSize="20sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

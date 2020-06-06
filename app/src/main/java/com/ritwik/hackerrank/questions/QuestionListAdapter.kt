@@ -25,7 +25,6 @@ class QuestionListAdapter(private val clickListener: ClickListener): ListAdapter
             binding.executePendingBindings()
             binding.clickListener = clickListener
         }
-
     }
 
     companion object DiffCallback: DiffUtil.ItemCallback<Question>() {
